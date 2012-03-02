@@ -20,8 +20,8 @@ Then load it in your bot:
     bot.start
 
 ## Commands
-    - timebomb <nick>
-    - cutwire <color>
+- timebomb <nick>
+- cutwire <color>
 
 ### Examples
     timebomb dominikh
