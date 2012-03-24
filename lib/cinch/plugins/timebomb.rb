@@ -20,7 +20,7 @@ module Cinch
 
       match /timebomb (.+)/, method: :plant_bomb
       match /cutwire (.+)/, method: :cut_wire
-      self.reacting_on = :channel
+      self.react_on = :channel
       self.required_options = [:channels]
 
       def plant_bomb(m, whom)
