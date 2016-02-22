@@ -18,8 +18,8 @@ module Cinch
       navi olive plum silver tan teal turquoise}
 
 
-      match /timebomb (.+)/, method: :plant_bomb
-      match /cutwire (.+)/, method: :cut_wire
+      match /timebomb ([^ ]+)/, method: :plant_bomb
+      match /cutwire ([^ ]+)/, method: :cut_wire
       self.react_on = :channel
       self.required_options = [:channels]
 
@@ -50,7 +50,7 @@ module Cinch
 
 
         timer = Timer(duration, shots: 1) do
-          m.channel.kick(m.user, "*BOOM!*")
+          m.channel.kick(whom, "*BOOM!*")
           @bombs[m.channel] = nil
         end
 
